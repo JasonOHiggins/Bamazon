@@ -1,0 +1,27 @@
+{
+  "name": "Bamazon",
+  "version": "1.0.0",
+  "description": "Instructions",
+  "main": "bamazonCustomer.js",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquire": "^0.4.8",
+    "inquirer": "^5.2.0",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonOHiggins/Bamazon.git"
+  },
+  "keywords": [],
+  "author": "Jason O'Higgins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JasonOHiggins/Bamazon/issues"
+  },
+  "homepage": "https://github.com/JasonOHiggins/Bamazon#readme"
+}

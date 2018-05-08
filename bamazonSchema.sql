@@ -1,17 +1,36 @@
-DROP DATABASE IF EXISTS bamazon_DB;
+-- Create a database called 'Bamazon' and switch into it for this activity --
+CREATE DATABASE Bamazon;
+USE Bamazon;
 
-CREATE DATABASE bamazon_DB;
-
-USE bamazon_DB;
-
+-- Create a table called 'products' which will contain the store inventory --
 CREATE TABLE products (
-  id INT NOT NULL AUTO_INCREMENT,
-  product VARCHAR(50) NULL,
-  department VARCHAR(50) NULL,
-  price INT NULL,
-  stock INT NULL,
-  PRIMARY KEY (id)
+	item_id INTEGER(11) AUTO_INCREMENT NOT NULL,
+	product_name VARCHAR(30) NOT NULL,
+	department_name VARCHAR(20) NOT NULL,
+	price DECIMAL(10,2) NOT NULL,
+	stock_quantity INTEGER(11) NOT NULL,
+	PRIMARY KEY (item_id)
 );
 
-INSERT INTO products (product, department, price, stock)
-VALUES ("shirt", "clothing", 20, 50), ("pants", "clothing", 25, 50), ("TV", "electronics", 200, 40), ("laptop", "electronics", 800, 150), ("bicycyle", "outdoors", 350, 25), ("lawnmower", "outdoors", 200, 25), ("pool table", "recreation", 1200, 10), ("headphones", "electronic", 30, 200), ("grill", "recreation", 200, 50), ("pool noodle", "recreation", 15, 400);
+-- Insert data into the 'products' table --
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES  ('Dove Shampoo', 'Cosmetics', 5.75, 500),
+		('Dove Conditioner', 'Cosmetics', 6.25, 627),
+		('Glad 12 Gal Trash Bags', 'Grocery', 5.99, 300),
+		('Brawny Paper Towels', 'Grocery', 4.25, 400),
+		('Granny Smith Apples', 'Produce', 0.35, 800),
+		('Chiquita Bannana', 'Produce', 0.20, 10000),
+		('Tropicana Orange Juice', 'Grocery', 4.45, 267),
+		('Horizon Organic Milk', 'Grocery', 4.50, 200),
+		('Huggies Diapers', 'Children', 2.75, 476),
+		('Charmin Toiler Paper', 'Grocery', 12.99, 575),
+		('Pampers Baby Wipes', 'Children', 1.50, 423),
+		('Yoga Mat', 'Sports', 12.75, 150),
+		('5lb Dumb bell', 'Sports', 7.99, 89),
+		('Tie Dye Shirt', 'Clothing', 5.55, 120),
+		('Nike Shorts', 'Clothing', 17.88, 250),
+		('Purina Cat Chow', 'Pet', 7.25, 157),
+		('Fancy Feast Wet Cat Food', 'Pet', 12.50, 163),
+		('Ibuprophen', 'Pharmacy', 4.95, 389),
+		('Band Aid', 'Pharmacy', 3.25, 550),
+		('Ben & Jerry Ice Cream', 'Grocery', 3.25, 432);
